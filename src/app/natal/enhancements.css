@@ -1,0 +1,18 @@
+.natalAudit { margin:0 0 25px; padding:22px 26px; border:1px solid #a99bc9; border-radius:18px; background:#eee5f6; }
+.natalAudit p { margin:10px 0; font-size:14px; }
+.natalAudit small { color:#665184; font-size:11px; overflow-wrap:anywhere; }
+.natalHouseContext { border-left:3px solid #cfc4e8; padding-left:16px; color:#665184; }
+.natalReading { grid-template-columns:1fr; }
+.natalReading article:not(.isActive) { display:none; }
+.natalReadingNav { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px; }
+.natalReadingNav button { border:1px solid #a99bc9; border-radius:12px; padding:12px 16px; background:#eee5f6; color:#3d2b53; cursor:pointer; font:14px Arial,sans-serif; }
+.natalReadingNav button:disabled { opacity:.4; cursor:default; }
+.natalReadingNav span { font-size:12px; }
+.natalAspectCards { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:25px; }
+.natalAspectCards section { padding:22px; background:#fffaf2; border:1px solid #d8c5e5; border-radius:14px; }
+.natalAspectCards h4 { margin:0 0 12px; font:24px/1.2 Georgia,serif; }
+.natalAspectCards b { font-size:12px; color:#665184; }
+.natalAspectCards p { font-size:14px; margin:14px 0; }
+.natalAspectCards small { font-size:10px; color:#665184; overflow-wrap:anywhere; }
+@media(max-width:760px) { .natalAspectCards { grid-template-columns:1fr; } .natalAudit { padding:20px; } .natalReadingNav { flex-wrap:wrap; } .natalReadingNav span { order:-1; width:100%; text-align:center; } .natalReadingNav button { padding:12px; font-size:12px; } }
+@media print { .natalReadingNav { display:none; } .natalReading article:not(.isActive) { display:block; } .natalAspectCards { display:block; } .natalAspectCards section { break-inside:avoid; margin-bottom:16px; } .natalAudit { background:white; } }

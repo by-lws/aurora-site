@@ -1,0 +1,3 @@
+import {CatalogEditor} from "./editor";import "../astro.css";
+export const metadata={title:"Редактор каталога — локальный прототип",robots:{index:false,follow:false}};
+export default function Admin(){return <main className="astroPage"><section className="shell astroSection"><h1 className="astroTitle">Редактор каталога</h1><p className="astroNotice">Локальный прототип, не защищённая админ-панель. Сохраняет каталог только в этом браузере; не управляет сервером, оплатой и персональными данными. Настоящие учётные записи, база, журнал действий и уведомления ещё не подключены.</p><CatalogEditor/></section></main>;}

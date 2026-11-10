@@ -1,0 +1,8 @@
+import Link from "next/link";
+import { SiteHeader } from "../components/site-header";
+import { SiteFooter } from "../components/site-footer";
+import { CompassMark } from "../components/aurora-art";
+import { CatalogCards } from "../astro-components";
+import styles from "../readings.module.css";
+export const metadata = { title: "Разборы — карта рождения и личные истории", description: "Натальная карта (экспрес), релокация и личные разборы с Авророй. Выберите свой формат." };
+export default function ReadingsPage() { return <main className={styles.page}><SiteHeader tone="dark"/><div className={styles.wrap}><section className={styles.intro}><div><p className={styles.kicker}>АСТРОЛОГИЯ · ТВОЯ ИСТОРИЯ</p><h1 className={styles.title}>Разборы.</h1><p>Карта рождения, новый город или личная история.</p></div><div className={styles.introArt} data-aurora-motion="orbit"><CompassMark/></div></section><nav className={styles.tabs} aria-label="Форматы разборов"><a href="#automatic">Самостоятельно ↓</a><a href="#personal">Лично с Авророй ↓</a></nav><section className={styles.section} id="automatic"><div className={styles.sectionHeader} data-aurora-reveal><h2>Самостоятельно</h2><span>ДВА АВТОМАТИЧЕСКИХ ФОРМАТА</span></div><p className={styles.notice}>Тестовая версия. Сейчас доступны расчёты на вымышленных данных и тестовая оплата без списаний.</p><CatalogCards kind="automatic"/></section><section className={styles.section} id="personal"><div className={styles.sectionHeader} data-aurora-reveal><h2>Лично с Авророй</h2><span>РАЗГОВОР · ТВОЙ ЗАПРОС · ВНИМАНИЕ</span></div><CatalogCards kind="personal"/></section><Link href="/services" className={styles.more}>Хочется начать с Таро? Выбрать расклад ↗</Link></div><SiteFooter/></main>; }

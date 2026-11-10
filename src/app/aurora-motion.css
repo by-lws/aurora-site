@@ -1,0 +1,12 @@
+/* Progressive enhancement: new content is readable before hydration or without JS. */
+[data-aurora-reveal]{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+[data-aurora-reveal].auroraRevealPending{opacity:0;transform:translateY(22px)}
+[data-aurora-motion]{will-change:transform}
+.legacyMonoCat{display:inline-block;width:76px;height:auto;vertical-align:middle}
+.legacyCloud{display:block;width:140px;height:65px;color:var(--paper)}
+body .clubHeroCloud.legacyCloud{width:350px;height:135px;min-width:0;border:0;border-radius:0;background:none;filter:none}
+body .doubtCloud b>.legacyCloud{width:160px;height:85px}
+body .compactCat>.legacyMonoCat{width:85px}
+body .deckCat>.legacyMonoCat{width:80px}
+@media(max-width:760px){[data-aurora-reveal].auroraRevealPending{transform:translateY(16px)}.legacyMonoCat{width:65px}}
+@media(prefers-reduced-motion:reduce){[data-aurora-reveal],[data-aurora-reveal].auroraRevealPending{opacity:1;transform:none;transition:none}[data-aurora-motion]{transform:none!important;will-change:auto}}

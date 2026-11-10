@@ -1,0 +1,8 @@
+import Link from "next/link";
+import { SiteHeader } from "../components/site-header";
+import { SiteFooter } from "../components/site-footer";
+import { MoonCat } from "../components/aurora-art";
+import { telegram, channel, manager } from "../content";
+import styles from "../aurora-pages.module.css";
+export const metadata={title:"На связи с Авророй"};
+export default function Contacts(){return <main className={styles.page}><SiteHeader tone="dark"/><div className={styles.wrap}><section className={styles.hero}><div><p className={styles.eyebrow}>КОНТАКТЫ · БЕЗ ЛИШНИХ ФОРМАЛЬНОСТЕЙ</p><h1 className={styles.title}>Давай<br/><em>поговорим.</em></h1><p className={styles.lead}>Вопросы о раскладе, выборе формата или записи — можно просто написать.</p><a className={styles.primary} href={telegram} target="_blank" rel="noreferrer">Написать Авроре <span aria-hidden="true">↗</span></a></div><div className={styles.art} data-aurora-motion="cat"><MoonCat sleepy/></div></section><section className={styles.section}><div className={styles.formatList}><article className={styles.format} data-aurora-reveal><span>01</span><div><h3>Вопрос менеджеру</h3><p>Помощь с организацией и записью.</p></div><a href={manager} target="_blank" rel="noreferrer">Открыть Telegram ↗</a></article><article className={styles.format} data-aurora-reveal><span>02</span><div><h3>Жизнь между раскладами</h3><p>Канал Авроры: карты, путешествия и повседневность.</p></div><a href={channel} target="_blank" rel="noreferrer">Читать канал ↗</a></article></div><Link className={styles.smallNote} href="/readings">Сначала посмотреть разборы →</Link></section></div><SiteFooter/></main>;}
